@@ -14,7 +14,7 @@ public class MyRepository {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 //    @Cacheable(value="testCache", key = "#input")
-    @Cacheable(value = "testCache", key = "#input")
+    @Cacheable(value = "testCache", key = "#input", sync = true)
     public List<Long> testReturningListOfLongs(int input)
     {
         logger.info("Inside the method for: " + input);
